@@ -14,11 +14,11 @@ import lombok.Data;
 @Data
 @Entity(name = "tb_users")
 public class UserModel {
-
+    
     @Id
     @GeneratedValue(generator = "UUID")
-    public UUID id;
-
+    private UUID id;
+    
     @Column(unique = true)
     private String username;
     private String name;
@@ -26,10 +26,5 @@ public class UserModel {
 
     @CreationTimestamp
     private LocalDateTime createAt;
-    
-    //getters setters
 
-
-
-    
 }
